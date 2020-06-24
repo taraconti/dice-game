@@ -1,0 +1,140 @@
+﻿<Window x:Class="DiceGame.GameSettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DiceGame"
+        mc:Ignorable="d"
+        Title="Game Settings" ResizeMode="NoResize" BorderThickness="0" Height="420" Width="340" WindowStartupLocation="CenterOwner">
+    <Grid Background="White" Height="382" Margin="30,0,30,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="22*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border BorderThickness="1" BorderBrush="LightGray" Margin="0,7,0,8"></Border>
+        <Grid Background="White" Grid.Row="0" Margin="10,12,10,13">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.2*"></RowDefinition>
+                <RowDefinition Height="9*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Content="Number of Players:" Grid.Column="0" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="-5,0,0,0" Width="116" />
+                <ComboBox Name="numPlayers" VerticalAlignment="Center" Height="20" SelectionChanged="numPlayers_SelectionChanged" Margin="115,8,90,5" Grid.ColumnSpan="2" >
+                    <ComboBoxItem FontSize="12" Content="1"></ComboBoxItem>
+                    <ComboBoxItem Content="2"></ComboBoxItem>
+                    <ComboBoxItem Content="3"></ComboBoxItem>
+                    <ComboBoxItem Content="4"></ComboBoxItem>
+                    <ComboBoxItem Content="5"></ComboBoxItem>
+                    <ComboBoxItem Content="6"></ComboBoxItem>
+                    <ComboBoxItem Content="7"></ComboBoxItem>
+                    <ComboBoxItem Content="8"></ComboBoxItem>
+                    <ComboBoxItem Content="9"></ComboBoxItem>
+                    <ComboBoxItem Content="10"></ComboBoxItem>
+                </ComboBox>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4.2*"></ColumnDefinition>
+                    <ColumnDefinition Width="10*"></ColumnDefinition>
+                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Column="1" FontSize="12" Text="Name"
+                           VerticalAlignment="Center" HorizontalAlignment="Center">
+                </TextBlock>
+                <TextBlock Grid.Column="2" FontSize="12" Text="Computer"
+                           VerticalAlignment="Center" HorizontalAlignment="Center">
+                </TextBlock>
+                <TextBlock Name="player1" Grid.Row="1" FontSize="12" Text="Player 1"
+                           VerticalAlignment="Center" HorizontalAlignment="Left">
+                </TextBlock>
+                <TextBlock Name="player2" Grid.Row="2" FontSize="12" Foreground="LightGray" Text="Player 2"
+                           VerticalAlignment="Center" HorizontalAlignment="Left">
+                </TextBlock>
+                <TextBlock Name="player3" Grid.Row="3" FontSize="12" Foreground="LightGray" Text="Player 3"
+                           VerticalAlignment="Center" HorizontalAlignment="Left">
+                </TextBlock>
+                <TextBlock Name="player4" Grid.Row="4" FontSize="12" Foreground="LightGray" Text="Player 4"
+                           VerticalAlignment="Center" HorizontalAlignment="Left">
+                </TextBlock>
+                <TextBlock Name="player5" Grid.Row="5" FontSize="12" Foreground="LightGray" Text="Player 5"
+                           VerticalAlignment="Center" HorizontalAlignment="Left">
+                </TextBlock>
+                <TextBlock Name="player6" Grid.Row="6" FontSize="12" Foreground="LightGray" Text="Player 6"
+                           VerticalAlignment="Center" HorizontalAlignment="Left">
+                </TextBlock>
+                <TextBlock Name="player7" Grid.Row="7" FontSize="12" Foreground="LightGray" Text="Player 7"
+                           VerticalAlignment="Center" HorizontalAlignment="Left">
+                </TextBlock>
+                <TextBlock Name="player8" Grid.Row="8" FontSize="12" Foreground="LightGray" Text="Player 8"
+                           VerticalAlignment="Center" HorizontalAlignment="Left">
+                </TextBlock>
+                <TextBlock Name="player9" Grid.Row="9" FontSize="12" Foreground="LightGray" Text="Player 9"
+                           VerticalAlignment="Center" HorizontalAlignment="Left">
+                </TextBlock>
+                <TextBlock Name="player10" Grid.Row="10" FontSize="12" Foreground="LightGray" Text="Player 10"
+                           VerticalAlignment="Center" HorizontalAlignment="Left">
+                </TextBlock>
+                <TextBox Name="name1"  Grid.Column="1" Grid.Row="1" Height="18" TextChanged="name1_TextChanged" ></TextBox>
+                <TextBox Name="name2" Grid.Column="1" Grid.Row="2" Height="18" TextChanged="name2_TextChanged" Background="LightGray" IsEnabled="False"></TextBox>
+                <TextBox Name="name3" Grid.Column="1" Grid.Row="3" Height="18" TextChanged="name3_TextChanged" Background="LightGray" IsEnabled="False"></TextBox>
+                <TextBox Name="name4" Grid.Column="1" Grid.Row="4" Height="18" TextChanged="name4_TextChanged" Background="LightGray" IsEnabled="False"></TextBox>
+                <TextBox Name="name5" Grid.Column="1" Grid.Row="5" Height="18" TextChanged="name5_TextChanged" Background="LightGray" IsEnabled="False"></TextBox>
+                <TextBox Name="name6" Grid.Column="1" Grid.Row="6" Height="18" TextChanged="name6_TextChanged" Background="LightGray" IsEnabled="False"></TextBox>
+                <TextBox Name="name7" Grid.Column="1" Grid.Row="7" Height="18" TextChanged="name7_TextChanged" Background="LightGray" IsEnabled="False"></TextBox>
+                <TextBox Name="name8" Grid.Column="1" Grid.Row="8" Height="18" TextChanged="name8_TextChanged" Background="LightGray" IsEnabled="False"></TextBox>
+                <TextBox Name="name9" Grid.Column="1" Grid.Row="9" Height="18" TextChanged="name9_TextChanged" Background="LightGray" IsEnabled="False"></TextBox>
+                <TextBox Name="name10" Grid.Column="1" Grid.Row="10" Height="18" TextChanged="name10_TextChanged" Background="LightGray" IsEnabled="False"></TextBox>
+                <CheckBox Name="computer1" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Background="LightGray" IsEnabled="False" Checked="computer1_Checked" ></CheckBox>
+                <CheckBox Name="computer2" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Background="LightGray" IsEnabled="False" Checked="computer2_Checked"></CheckBox>
+                <CheckBox Name="computer3" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Background="LightGray" IsEnabled="False" Checked="computer3_Checked"></CheckBox>
+                <CheckBox Name="computer4" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Background="LightGray" IsEnabled="False" Checked="computer4_Checked"></CheckBox>
+                <CheckBox Name="computer5" Grid.Column="2" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" Background="LightGray" IsEnabled="False" Checked="computer5_Checked"></CheckBox>
+                <CheckBox Name="computer6" Grid.Column="2" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" Background="LightGray" IsEnabled="False" Checked="computer6_Checked"></CheckBox>
+                <CheckBox Name="computer7" Grid.Column="2" Grid.Row="7" HorizontalAlignment="Center" VerticalAlignment="Center" Background="LightGray" IsEnabled="False" Checked="computer7_Checked"></CheckBox>
+                <CheckBox Name="computer8" Grid.Column="2" Grid.Row="8" HorizontalAlignment="Center" VerticalAlignment="Center" Background="LightGray" IsEnabled="False" Checked="computer8_Checked"></CheckBox>
+                <CheckBox Name="computer9" Grid.Column="2" Grid.Row="9" HorizontalAlignment="Center" VerticalAlignment="Center" Background="LightGray" IsEnabled="False" Checked="computer9_Checked"></CheckBox>
+                <CheckBox Name="computer10" Grid.Column="2" Grid.Row="10" HorizontalAlignment="Center" VerticalAlignment="Center" Background="LightGray" IsEnabled="False" Checked="computer10_Checked"></CheckBox>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="13*"></ColumnDefinition>
+                <ColumnDefinition Width="13*"></ColumnDefinition>
+                <ColumnDefinition Width="13*"></ColumnDefinition>
+                <ColumnDefinition Width="12*"></ColumnDefinition>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button Name="start" Grid.Column="2" FontSize="12" HorizontalAlignment="Left" Height="20" Width="60" Content="OK" Click="start_Click_1" Margin="0,12,0,12"></Button>
+            <Button Name="cancel" Grid.Column="3" FontSize="12" HorizontalAlignment="Left" Height ="20" Width="60" Content="Cancel" Grid.ColumnSpan="2" Margin="5,12,0,12" />
+        </Grid>
+    </Grid>
+</Window>
